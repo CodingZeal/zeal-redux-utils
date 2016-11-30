@@ -2,8 +2,11 @@
   "name": "zeal-redux-utils",
   "version": "0.1.0",
   "description": "Utility functions for working with Redux",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src -d lib",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +25,12 @@
   "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme",
   "dependencies": {
     "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "rimraf": "^2.5.4"
   }
 }
