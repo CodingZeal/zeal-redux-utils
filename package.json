@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/codingzeal/zeal-redux-utils/issues"
   },
-  "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme"
+  "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme",
+  "dependencies": {
+    "ramda": "^0.22.1"
+  }
 }
