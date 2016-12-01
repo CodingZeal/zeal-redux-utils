@@ -7,7 +7,8 @@
     "build": "babel src -d lib",
     "clean": "rimraf lib",
     "prepublish": "npm run clean && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "babel-core": "^6.18.2",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-stage-1": "^6.16.0",
+    "jest": "^17.0.3",
     "rimraf": "^2.5.4"
   }
 }
