@@ -4,7 +4,7 @@ machine:
       6.9.1
 test:
   override:
-    - yarn validate
+    - yarn test
 dependencies:
   pre:
     # Install Yarn
