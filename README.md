@@ -13,5 +13,9 @@ npm install --save zeal-redux-utils
 ## Usage
 
 ```javascript
-import { createActionTypes, createReducer } from 'zeal-redux-utils'
+import {
+  createActionTypes,
+  createReducer,
+  globalizeSelectors
+} from 'zeal-redux-utils'
 ```
