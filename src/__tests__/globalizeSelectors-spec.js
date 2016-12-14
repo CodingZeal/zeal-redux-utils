@@ -1,4 +1,4 @@
-import { prop } from 'ramda'
+import { curry, prop } from 'ramda'
 
 import globalizeSelectors from '../globalizeSelectors'
 
@@ -8,15 +8,14 @@ describe('globalizeSelectors', () => {
       numbers: [2, 3, 4]
     }
   }
-
   const localState = prop('section')
-
-  const selectors = {
-    numbers: prop('numbers'),
-    numberAt: (index, state) => state.numbers[index]
-  }
-
-  const globalized = globalizeSelectors(localState, selectors)
+  const numbers = prop('numbers')
+  const numberAt = (index, state) => state.numbers[index]
+  const globalized = globalizeSelectors(localState, {
+    numbers,
+    numberAt,
+    curriedNumberAt: curry(numberAt)
+  })
 
   context('with a single-argument selector', () => {
     test('allows the selector to work from the global state', () => {
@@ -26,7 +25,17 @@ describe('globalizeSelectors', () => {
 
   context('with a multi-argument selector', () => {
     test('allows the selector to work from the global state', () => {
-      expect(globalized.numberAt(1, globalState)).toEqual(3)
+      expect(globalized.numberAt(1, globalState)).toBe(3)
+    })
+  })
+
+  context('with a curried selector', () => {
+    test('the selector can be called normally', () => {
+      expect(globalized.curriedNumberAt(2, globalState)).toBe(4)
+    })
+
+    test('the selector can be curried', () => {
+      expect(globalized.curriedNumberAt(2)(globalState)).toBe(4)
     })
   })
 })
