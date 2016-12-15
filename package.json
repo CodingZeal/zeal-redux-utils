@@ -6,9 +6,9 @@
   "scripts": {
     "build": "babel src -d lib",
     "clean": "rimraf lib",
-    "prepublish": "npm test && npm run clean && npm run build",
+    "prepublish": "yarn test && yarn run clean && yarn build",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "yarn test -- --watch"
   },
   "repository": {
     "type": "git",
