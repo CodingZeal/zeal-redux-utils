@@ -21,9 +21,10 @@ const throwIfNotFSA = action => {
 const isProduction = process.env.NODE_ENV === 'production'
 const ensureIsFSA = isProduction ? identity : throwIfNotFSA
 
-export default (initialState, handlers) =>
-  (state = initialState, action) => {
+export default function createReducer(initialState, handlers) {
+  return (state = initialState, action) => {
     ensureIsFSA(action)
 
     return propOr(identity, action.type, handlers)(state, action)
   }
+}
