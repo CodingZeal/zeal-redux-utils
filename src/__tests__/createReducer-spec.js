@@ -1,4 +1,4 @@
-import createReducer from '../createReducer'
+import createReducer, { NonStandardAction } from '../createReducer'
 
 describe('createReducer', () => {
   const mockHandler = jest.fn()
@@ -19,5 +19,13 @@ describe('createReducer', () => {
     reducer(state, action)
 
     expect(mockHandler).toBeCalledWith(state, action)
+  })
+
+  test('the reducer checks for flux standard actions', () => {
+    const invalidAction = {}
+
+    expect(
+      () => reducer(state, invalidAction)
+    ).toThrowError(NonStandardAction)
   })
 })
