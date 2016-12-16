@@ -2,7 +2,25 @@
 
 All notable changes to this project will be documented in this file.    This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.2.0...HEAD)
+## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.0...HEAD)
+
+## [0.3.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.2.0...v0.3.0) - 2016-12-14
+
+### Changed
+
+* Check for flux standard actions (FSAs) in reducers created by `createReducer`.  The check is performed only in development mode.  Non-FSA actions raise a `NonStandardAction` exception. See [flux-standard-action](https://github.com/acdlite/flux-standard-action) for a definition of what is an FSA. ([#6](https://github.com/CodingZeal/zeal-redux-utils/pull/6))
+
+### Added
+
+* Add `nullAction` for use in reducer specs.  A `nullAction` is a flux-standard-action-compliant action that shouldn't match any of your normal actions.  It can be used to initialize the state in a reducer spec.  e.g `const initialState = reducer(undefined, nullAction)` ([#7](https://github.com/CodingZeal/zeal-redux-utils/pull/7))
+
+### Removed
+
+* Cleaned non-essential files out of the npm package to reduce package size. ([#8](https://github.com/CodingZeal/zeal-redux-utils/pull/8))
+
+### Internal
+
+* Use [yarn](https://yarnpkg.com/) for all building and scripting tasks. ([#8](https://github.com/CodingZeal/zeal-redux-utils/pull/8))
 
 ## [0.2.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.1.1...v0.2.0) - 2016-12-14
 
