@@ -1,5 +1,5 @@
 import { isFSA } from 'flux-standard-action'
-import { identity, propOr } from 'ramda'
+import { always, identity, propOr } from 'ramda'
 
 export class NonStandardAction {
   constructor(action) {
@@ -11,8 +11,8 @@ export class NonStandardAction {
   }
 }
 
-const throwIfNotFSA = action => {
-  if (isFSA(action)) return
+const throwIfNotFSA = (action, isWhitelisted = always(false)) => {
+  if (isWhitelisted(action) || isFSA(action)) return
 
   throw new NonStandardAction(action)
 }
@@ -21,9 +21,9 @@ const throwIfNotFSA = action => {
 const isProduction = process.env.NODE_ENV === 'production'
 const ensureIsFSA = isProduction ? identity : throwIfNotFSA
 
-export default function createReducer(initialState, handlers) {
+export default function createReducer(initialState, handlers, options = {}) {
   return (state = initialState, action) => {
-    ensureIsFSA(action)
+    ensureIsFSA(action, options.allowNonStandardActionIf)
 
     return propOr(identity, action.type, handlers)(state, action)
   }
