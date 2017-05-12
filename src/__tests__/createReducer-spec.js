@@ -33,4 +33,27 @@ describe('createReducer', () => {
       () => reducer(state, invalidAction)
     ).toThrowError(NonStandardAction)
   })
+
+  describe('whitelisting non-flux standard actions', () => {
+    const reducerWithWhitelist = createReducer({}, {}, {
+      allowNonStandardActionIf: action => action.type === 'WHITELISTED'
+    })
+    const state = reducerWithWhitelist(undefined, nullAction)
+
+    test('does not complain about whitelisted actions', () => {
+      const whitelistedAction = { type: 'WHITELISTED', notPayload: {} }
+
+      expect(
+        () => reducerWithWhitelist(state, whitelistedAction)
+      ).not.toThrowError(NonStandardAction)
+    })
+
+    test('continues to complain about non-whitelisted actions', () => {
+      const invalidAction = { type: 'NOT WHITELISTED', notPayload: {} }
+
+      expect(
+        () => reducer(state, invalidAction)
+      ).toThrowError(NonStandardAction)
+    })
+  })
 })
