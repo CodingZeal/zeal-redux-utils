@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.    This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.0...HEAD)
+## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.1...HEAD)
+
+## [0.3.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.0...v0.3.1) - 2017-05-12
+
+### Changed
+
+* `createReducer` now allows the caller to specify a whitelist function that can bypass the [flux standard action](https://github.com/acdlite/flux-standard-action) (FSA) check.  Some external libraries dispatch actions that do not conform to the FSA spec and we don't want those to trigger the `NonStandardAction` exception. The whitelist function should take an action and return `true` if it should bypass the FSA check, or false if it should be checked. Use it as follows: `createReducer(initialState, actionHandlers, { allowNonStandardActionIf: whitelistFunction })`. ([#9](https://github.com/CodingZeal/zeal-redux-utils/pull/9))
 
 ## [0.3.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.2.0...v0.3.0) - 2016-12-14
 
