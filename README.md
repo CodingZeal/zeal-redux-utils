@@ -15,9 +15,9 @@ npm install --save zeal-redux-utils
 
 zeal-redux-utils provides a number of utility functions that are useful in [Redux](http://redux.js.org/) applications, especially those that use a [modular or domain-style structure](https://jaysoo.ca/2016/02/28/organizing-redux-application/).
 
-* [createActionTypes](#createActionTypes)
-* [createReducer](#createReducer)
-* [globalizeSelectors](#globalizeSelectors)
+* [createActionTypes](#createactiontypes)
+* [createReducer](#createreducer)
+* [globalizeSelectors](#globalizeselectors)
 
 ### createActionTypes
 
