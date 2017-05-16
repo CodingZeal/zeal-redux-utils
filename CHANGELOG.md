@@ -2,9 +2,15 @@
 
 All notable changes to this project will be documented in this file.    This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.1...HEAD)
+## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.2...HEAD)
 
-## [0.3.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.0...v0.3.1) - 2017-05-12
+## [0.3.2](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.1...v0.3.2) - 2017-05-16
+
+### Added
+
+* Add documentation for the each of the utility functions to the README. ([#11](https://github.com/CodingZeal/zeal-redux-utils/pull/11))
+
+## [0.3.1](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.0...v0.3.1) - 2017-05-12
 
 ### Changed
 
