@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file.    This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.2...HEAD)
+## [Unreleased](https://github.com/CodingZeal/zeal-redux-utils/compare/v1.0.0...HEAD)
+
+## [1.0.0](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.2...v1.0.0) - 2017-05-17
+
+Releasing 0.3.2 as 1.0.0 with no changes.
 
 ## [0.3.2](https://github.com/CodingZeal/zeal-redux-utils/compare/v0.3.1...v0.3.2) - 2017-05-16
 
