@@ -29,7 +29,10 @@
     "ramda": "^0.22.1"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
