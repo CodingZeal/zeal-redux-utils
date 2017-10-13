@@ -26,17 +26,21 @@
   "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme",
   "dependencies": {
     "flux-standard-action": "^1.0.0",
-    "ramda": "^0.22.1"
+    "ramda": "^0.24.1"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
-    "babel-preset-latest": "^6.16.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-stage-1": "^6.16.0",
-    "jest": "^17.0.3",
+    "jest": "^21.2.1",
     "rimraf": "^2.5.4"
   }
 }

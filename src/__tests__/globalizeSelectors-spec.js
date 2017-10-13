@@ -17,19 +17,19 @@ describe('globalizeSelectors', () => {
     curriedNumberAt: curry(numberAt)
   })
 
-  context('with a single-argument selector', () => {
+  describe('with a single-argument selector', () => {
     test('allows the selector to work from the global state', () => {
       expect(globalized.numbers(globalState)).toEqual([2, 3, 4])
     })
   })
 
-  context('with a multi-argument selector', () => {
+  describe('with a multi-argument selector', () => {
     test('allows the selector to work from the global state', () => {
       expect(globalized.numberAt(1, globalState)).toBe(3)
     })
   })
 
-  context('with a curried selector', () => {
+  describe('with a curried selector', () => {
     test('the selector can be called normally', () => {
       expect(globalized.curriedNumberAt(2, globalState)).toBe(4)
     })
