@@ -26,7 +26,7 @@
   "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme",
   "dependencies": {
     "flux-standard-action": "^1.0.0",
-    "ramda": "^0.24.1"
+    "ramda": "^0.25.0"
   },
   "jest": {
     "testPathIgnorePatterns": [
