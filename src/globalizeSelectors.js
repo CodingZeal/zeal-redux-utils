@@ -1,4 +1,4 @@
-import { adjust, curryN, length, map } from 'ramda'
+import { adjust, curryN, length, map } from "ramda";
 
 /*
 Take a local state transform and an object containing selector functions.
@@ -23,9 +23,9 @@ localized, selector.
 */
 
 const globalize = transform => selector =>
-  curryN(length(selector),
-    (...args) => selector(...adjust(transform, -1, args))
-  )
+  curryN(length(selector), (...args) =>
+    selector(...adjust(transform, -1, args))
+  );
 
 export default (localStateTransform, selectors) =>
-  map(globalize(localStateTransform), selectors)
+  map(globalize(localStateTransform), selectors);
