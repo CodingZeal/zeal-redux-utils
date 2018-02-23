@@ -6,6 +6,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "clean": "rimraf lib",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "precommit": "lint-staged",
     "prepublish": "yarn test && yarn run clean && yarn build",
     "test": "jest",
     "test:watch": "yarn test -- --watch"
@@ -14,10 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/codingzeal/zeal-redux-utils.git"
   },
-  "keywords": [
-    "zeal",
-    "redux"
-  ],
+  "keywords": ["zeal", "redux"],
   "author": "Zeal",
   "license": "MIT",
   "bugs": {
@@ -29,10 +28,10 @@
     "ramda": "^0.25.0"
   },
   "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/lib/"
-    ]
+    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+  },
+  "lint-staged": {
+    "*.{js,json,md}": "prettier --list-different"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -40,7 +39,10 @@
     "babel-jest": "^22.0.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-1": "^6.16.0",
+    "husky": "^0.14.3",
     "jest": "^22.0.4",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.10.2",
     "rimraf": "^2.5.4"
   }
 }
