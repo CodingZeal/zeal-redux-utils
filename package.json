@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/codingzeal/zeal-redux-utils.git"
   },
-  "keywords": ["zeal", "redux"],
+  "keywords": [
+    "zeal",
+    "redux"
+  ],
   "author": "Zeal",
   "license": "MIT",
   "bugs": {
@@ -24,25 +27,28 @@
   },
   "homepage": "https://github.com/codingzeal/zeal-redux-utils#readme",
   "dependencies": {
-    "flux-standard-action": "^2.0.1",
+    "flux-standard-action": "^2.0.3",
     "ramda": "^0.25.0"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/lib/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ]
   },
   "lint-staged": {
     "*.{js,json,md}": "prettier --list-different"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-core": "^6.18.2",
-    "babel-jest": "^22.4.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.2.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-stage-1": "^6.16.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.2",
-    "lint-staged": "^7.0.0",
-    "prettier": "^1.10.2",
+    "jest": "^23.2.0",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.7",
     "rimraf": "^2.5.4"
   }
 }

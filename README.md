@@ -15,9 +15,9 @@ npm install --save zeal-redux-utils
 
 zeal-redux-utils provides a number of utility functions that are useful in [Redux](http://redux.js.org/) applications, especially those that use a [modular or domain-style structure](https://jaysoo.ca/2016/02/28/organizing-redux-application/).
 
-* [createActionTypes](#createactiontypes)
-* [createReducer](#createreducer)
-* [globalizeSelectors](#globalizeselectors)
+- [createActionTypes](#createactiontypes)
+- [createReducer](#createreducer)
+- [globalizeSelectors](#globalizeselectors)
 
 ### createActionTypes
 
@@ -170,10 +170,10 @@ export default globalizeSelectors(localState, {
 
 This approach to selectors is described in much more detail in a series of blog posts by Randy Coulman:
 
-* [Encapsulating the Redux State Tree](http://randycoulman.com/blog/2016/09/13/encapsulating-the-redux-state-tree/)
-* [Modular Reducers and Selectors](http://randycoulman.com/blog/2016/09/27/modular-reducers-and-selectors/)
-* [Globalizing Redux Selectors](http://randycoulman.com/blog/2016/11/29/globalizing-redux-selectors/)
-* [Globalizing Curried Selectors](http://randycoulman.com/blog/2016/12/27/globalizing-curried-selectors/)
+- [Encapsulating the Redux State Tree](http://randycoulman.com/blog/2016/09/13/encapsulating-the-redux-state-tree/)
+- [Modular Reducers and Selectors](http://randycoulman.com/blog/2016/09/27/modular-reducers-and-selectors/)
+- [Globalizing Redux Selectors](http://randycoulman.com/blog/2016/11/29/globalizing-redux-selectors/)
+- [Globalizing Curried Selectors](http://randycoulman.com/blog/2016/12/27/globalizing-curried-selectors/)
 
 ## License
 
